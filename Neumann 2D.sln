@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{0A250C98-E73C-C0FB-849B-260C676575BF}") = "Neumann 2D", "Assembly-CSharp.csproj", "{B4645D21-863E-ACD3-D855-F04998F4F17D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4645D21-863E-ACD3-D855-F04998F4F17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4645D21-863E-ACD3-D855-F04998F4F17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4645D21-863E-ACD3-D855-F04998F4F17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4645D21-863E-ACD3-D855-F04998F4F17D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
