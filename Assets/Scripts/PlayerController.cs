@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
 		if(upForce.y == 1)
 		{
 			Vector2 globalupforce = transform.TransformDirection (upForce);
-			rb2d.AddForce (globalupforce * 40);
+			rb2d.AddForce (globalupforce * 120);
 		}
 
 		//rb2d.MovePosition (rb2d.position + globalmovedir * moveSpeed * Time.fixedDeltaTime);
