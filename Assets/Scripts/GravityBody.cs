@@ -13,7 +13,7 @@ public class GravityBody : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
 		attractor.Attract (thisTransform);
 	}
