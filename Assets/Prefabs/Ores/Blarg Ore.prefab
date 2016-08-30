@@ -56,9 +56,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e681c66a954e394b89152677e125c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Iron
-  twoLetterID: Fe
-  value: 10
+  name: Gold
+  twoLetterID: Au
+  value: 50
   quantity: 1
 --- !u!212 &21266570
 SpriteRenderer:
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300018, guid: dca0d07e3a6264a94b33ece6ad46b1b7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5144046, g: 0.5955882, b: 0.22772491, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
