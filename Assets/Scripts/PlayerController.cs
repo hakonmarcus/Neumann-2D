@@ -35,13 +35,12 @@ public class PlayerController : MonoBehaviour {
 		{
 			grounded = true;
 		} 
-		else if (col.gameObject.tag == "Iron") 
+		else if (col.gameObject.tag == "Ore") 
 		{
-			Destroy (col.gameObject);
-			FeCount += 1;
-			SetCountText ();
-
-		}
+            Debug.Log("It's a hit!");
+            Grid.gameController.resourceController.addOre(col.gameObject);
+            Destroy(col.gameObject);
+        }
 	}
 
 	void OnCollisionExit2D (Collision2D col)

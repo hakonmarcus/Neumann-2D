@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeedGame.CSharp", "SeedGame.CSharp.csproj", "{6755788F-57B7-D235-9AC2-A91BAF2DAEA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeedGame.CSharp.Editor", "SeedGame.CSharp.Editor.csproj", "{1A0C30C5-694B-1CE6-A696-83988BF3CF1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{6755788F-57B7-D235-9AC2-A91BAF2DAEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6755788F-57B7-D235-9AC2-A91BAF2DAEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6755788F-57B7-D235-9AC2-A91BAF2DAEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0C30C5-694B-1CE6-A696-83988BF3CF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0C30C5-694B-1CE6-A696-83988BF3CF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0C30C5-694B-1CE6-A696-83988BF3CF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0C30C5-694B-1CE6-A696-83988BF3CF1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
