@@ -9,7 +9,7 @@ public class GravityAttractor : MonoBehaviour {
 	public void Attract(Transform body)
 	{
 		gravityUp = (body.position - transform.position).normalized;
-		Vector2 bodyUp = body.up;
+		//Vector2 bodyUp = body.up;
 
 		Rigidbody2D rb2d;
 		rb2d = body.GetComponent<Rigidbody2D>();

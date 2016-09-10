@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed = 15;
 	private int FeCount = 0;
+	private float battery;
+	private int batteryMax = 250;
 	public Text feText;
 
 	public SpriteRenderer flame;
@@ -16,10 +18,14 @@ public class PlayerController : MonoBehaviour {
 	private Vector2 upForce;
 	private bool grounded;
 
+	private bool transferring = false;
+	private Collider2D triggerpanel;
+
 	void Start()
 	{
 		rb2d = transform.GetComponent<Rigidbody2D> ();
 		SetCountText ();
+		battery = batteryMax;
 	}
 
 	void Update () 
@@ -27,6 +33,16 @@ public class PlayerController : MonoBehaviour {
 		moveDir = new Vector2 (Input.GetAxisRaw ("Horizontal"), 0).normalized;
 		upForce = new Vector2 (0, Input.GetAxisRaw ("Vertical")).normalized;
 
+		if(Input.GetKey ("down"))
+		{
+			createSolarPanel ();
+		}
+
+	}
+
+	void createSolarPanel()
+	{
+		
 	}
 
 	void OnCollisionEnter2D (Collision2D col)
@@ -51,6 +67,19 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerEnter2D (Collider2D col)
+	{
+		if (col.gameObject.name == "SolarPanel") 
+		{
+			transferring = true;
+			triggerpanel = col;
+			Debug.Log("It's a trig!");
+		}
+
+
+	}
+
+
 	void SetCountText ()
 	{
 		feText.text = FeCount.ToString ();
@@ -58,11 +87,26 @@ public class PlayerController : MonoBehaviour {
 		
 	void FixedUpdate ()
 	{
+		if (transferring)
+		{
+			if(triggerpanel.gameObject.GetComponent<Panel> ().charge > 0 && battery < batteryMax)
+			{
+				triggerpanel.gameObject.GetComponent<Panel> ().charge -= 50 * Time.deltaTime;
+				battery += 50 * Time.deltaTime;
+				Debug.Log ("transferring");
+			}
+			else
+			{
+				transferring = false;
+				triggerpanel = null;
+			}
+
+		}
 
 		if (moveDir != new Vector2 (0, 0)) 
 		{
 			rb2d.angularDrag = 0;
-			Vector2 globalmovedir = transform.TransformDirection (moveDir);
+			//Vector2 globalmovedir = transform.TransformDirection (moveDir);
 			rb2d.AddTorque (-moveDir.x);
 
 			//rb2d.rotation -= moveDir.x;
@@ -85,11 +129,20 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		if(upForce.y == 1)
+		if(upForce.y == 1 && battery > 0)
 		{
 			Vector2 globalupforce = transform.TransformDirection (upForce);
 			rb2d.AddForce (globalupforce * 6);
 			flame.enabled = true;
+			battery -= 50 * Time.fixedDeltaTime;
+
+			if(battery < 0)
+			{
+				battery = 0;
+			}
+
+			//Debug.Log(battery);
+
 		}
 		else
 		{

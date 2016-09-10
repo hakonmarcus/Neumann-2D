@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour {
+public class GameController : MonoBehaviour 
+{
 
     public GameObject resourceControllerObject;
     public ResourceController resourceController;
@@ -14,7 +15,8 @@ public class GameController : MonoBehaviour {
     }
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
         Debug.Log("Init!");
         DontDestroyOnLoad(this);
         resourceControllerObject = Instantiate(resourceControllerObject);
@@ -32,7 +34,8 @@ public class GameController : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update () 
+	{
 	
 	}
 }
