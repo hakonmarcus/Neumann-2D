@@ -51,7 +51,7 @@ public static class Grid {
 
         else
         {
-            Debug.Log("Succesfully loaded component " + s + "in Grid");
+            Debug.Log("Succesfully loaded component " + s + " in Grid");
             return c;
         }
     }

@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ResourceController : MonoBehaviour {
+public class ResourceController : MonoBehaviour 
+{
 
     public Dictionary<string, int> resourcePool;
 
@@ -10,13 +11,15 @@ public class ResourceController : MonoBehaviour {
     public static event ChangeAction Change;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
         Debug.Log("Starting new cool thing!");
         resourcePool = new Dictionary<string, int>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 
     }
 
