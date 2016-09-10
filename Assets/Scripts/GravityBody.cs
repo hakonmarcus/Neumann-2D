@@ -10,6 +10,7 @@ public class GravityBody : MonoBehaviour
 	void Start ()
 	{
 		thisTransform = transform;
+
 	}
 	
 	// Update is called once per frame

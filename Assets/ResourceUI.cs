@@ -27,7 +27,6 @@ public class ResourceUI : MonoBehaviour {
 
     void redraw()
     {
-
         foreach(Transform child in transform)
         {
             GameObject.Destroy(child.gameObject);
@@ -44,8 +43,6 @@ public class ResourceUI : MonoBehaviour {
 
             resourceType.transform.SetParent(this.transform, false);
         }
-
-
     }
 
 

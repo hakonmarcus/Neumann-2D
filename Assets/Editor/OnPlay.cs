@@ -34,7 +34,6 @@ public static class LoadSceneOnPressingPlay
                 currentLevel = SceneManager.GetActiveScene().buildIndex;
                 Debug.Log("Loading first level");
                 SceneManager.LoadScene(0);
-                
             }
         }
     }

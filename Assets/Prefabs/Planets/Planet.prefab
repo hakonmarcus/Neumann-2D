@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5074030}
   - 58: {fileID: 5830462}
   - 114: {fileID: 11407284}
+  - 114: {fileID: 11416604}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Untagged
@@ -76,6 +77,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravity: -2
   gravityUp: {x: 0, y: 0}
+--- !u!114 &11416604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106de60a153f7ac439970d60c9f5a1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minerals:
+  - {fileID: 194552, guid: 925c0850c0966cc45b4662bb75be5f30, type: 2}
+  - {fileID: 194552, guid: 0e6ac44742ed844ec9d563372c222e36, type: 2}
 --- !u!212 &21275212
 SpriteRenderer:
   m_ObjectHideFlags: 1
