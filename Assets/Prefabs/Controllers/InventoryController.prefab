@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 459644}
-  - 114: {fileID: 11459730}
+  - 114: {fileID: 11474078}
   m_Layer: 0
   m_Name: InventoryController
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11459730
+--- !u!114 &11474078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryPool: []
   inventorySize: 5
-  stackMax: 10
+  stackMax: 24
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

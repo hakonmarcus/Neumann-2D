@@ -7,19 +7,12 @@ using System.Linq;
 public class Inventory : MonoBehaviour 
 {
 	//public GameObject resourceTypeUI;
-	public List<GameObject> resources;
+	//public List<GameObject> resources;
     //public Transform FeIcon;
     //public Transform SiIcon;
-    public Transform ResourceIcon;
+    //public Transform ResourceIcon;
 
-    public SpriteRenderer SiFrame;
-    public SpriteRenderer SiFill;
-    public SpriteRenderer SiBack;
-
-    public SpriteRenderer FeFrame;
-    public SpriteRenderer FeFill;
-    public SpriteRenderer FeBack;
-
+    public GameObject stackIcon;
 
 	// Use this for initialization
 	void Start () 
@@ -48,21 +41,33 @@ public class Inventory : MonoBehaviour
 
             if(stack.amount != 0)
             {
-                GameObject rIcon = Instantiate(ResourceIcon, pos, Quaternion.identity) as GameObject;
+                stackIcon = Instantiate(stackIcon, new Vector3(0,0,0), Quaternion.identity) as GameObject;
+                ResourceIcon rI = stackIcon.GetComponent<ResourceIcon>();
+                rI.Draw(stack.type,stack.amount);
+                rI.transform.SetParent(this.transform);
+                rI.transform.localPosition = pos;
+                rI.transform.localRotation = Quaternion.identity;
+                rI.transform.localScale = new Vector3(1, 1, 1);
+
+               
+                /*GameObject rIcon = new GameObject();
+                rIcon.transform.position = pos;
+                rIcon.AddComponent<ResourceIcon>();
+
+                //GameObject rIcon = Instantiate(ResourceIcon, pos, Quaternion.identity) as GameObject;
+                //rIcon.AddComponent(ResourceIcon);
+                ResourceIcon rI = rIcon.GetComponent<ResourceIcon>();
+
+
+                rI.Draw(stack.type);*/
             }
 
             //noe som setter rIcon sin parent til å være denne transformen, så det havner i lista
             // det funker ikke å gjøre dette ––– rIcon.transform.SetParent(this.transform,true);
 
+           
             // noe som bytter ut spritesa i ResourceIcon så det passer med typen ressurs vi har plukket opp
-            if(stack.type == "Fe")
-            {
-                
-            }
-            else if(stack.type == "Si")
-            {
-                
-            }
+
 
             //må også sette antall på hver stack.
 
