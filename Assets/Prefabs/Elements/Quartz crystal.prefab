@@ -56,9 +56,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e681c66a954e394b89152677e125c24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Gold
-  twoLetterID: Au
-  value: 50
+  name: Quartz
+  twoLetterID: Si
+  value: 2
   quantity: 1
 --- !u!212 &21266570
 SpriteRenderer:

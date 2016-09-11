@@ -8,6 +8,7 @@ public static class Grid {
 
     public static GameController gameController;
     public static ResourceController resourceController;
+	public static InventoryController inventoryController;
 
     static Grid()
     {

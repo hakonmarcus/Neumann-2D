@@ -7,6 +7,9 @@ public class GameController : MonoBehaviour {
     public GameObject resourceControllerObject;
     public ResourceController resourceController;
 
+	public GameObject inventoryControllerObject;
+	public InventoryController inventoryController;
+
     void Awake()
     {
         Grid.ping();
@@ -17,6 +20,7 @@ public class GameController : MonoBehaviour {
 	void Start () {
         Debug.Log("Init!");
         DontDestroyOnLoad(this);
+
         resourceControllerObject = Instantiate(resourceControllerObject);
         resourceControllerObject.transform.SetParent(this.transform);
         resourceController = resourceControllerObject.GetComponent<ResourceController>();
@@ -25,6 +29,15 @@ public class GameController : MonoBehaviour {
         {
             Debug.LogError("ResourceController could not be found!");
         }
+
+		inventoryControllerObject = Instantiate (inventoryControllerObject);
+		inventoryControllerObject.transform.SetParent (this.transform);
+		inventoryController = inventoryControllerObject.GetComponent<InventoryController> ();
+
+		if(inventoryController == null)
+		{
+			Debug.LogError("InventoryController could not be found!");
+		}
 
         SceneManager.LoadScene("MainGame");
 

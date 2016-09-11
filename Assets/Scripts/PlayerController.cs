@@ -54,7 +54,8 @@ public class PlayerController : MonoBehaviour {
 		else if (col.gameObject.tag == "Ore") 
 		{
             Debug.Log("It's a hit!");
-            Grid.gameController.resourceController.addOre(col.gameObject);
+            //Grid.gameController.resourceController.addOre(col.gameObject);
+			Grid.gameController.inventoryController.addOre (col.gameObject);
             Destroy(col.gameObject);
         }
 	}
@@ -75,7 +76,17 @@ public class PlayerController : MonoBehaviour {
 			triggerpanel = col;
 			Debug.Log("It's a trig!");
 		}
+			
+	}
 
+	void OnTriggerExit2D (Collider2D col)
+	{
+		if (col.gameObject.name == "SolarPanel") 
+		{
+			transferring = false;
+			triggerpanel = null;
+			Debug.Log("Left the trig!");
+		}
 
 	}
 
@@ -93,7 +104,7 @@ public class PlayerController : MonoBehaviour {
 			{
 				triggerpanel.gameObject.GetComponent<Panel> ().charge -= 50 * Time.deltaTime;
 				battery += 50 * Time.deltaTime;
-				Debug.Log ("transferring");
+				//Debug.Log ("transferring");
 			}
 			else
 			{
