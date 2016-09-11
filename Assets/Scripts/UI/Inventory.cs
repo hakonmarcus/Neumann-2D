@@ -6,40 +6,69 @@ using System.Linq;
 
 public class Inventory : MonoBehaviour 
 {
-	public GameObject resourceTypeUI;
+	//public GameObject resourceTypeUI;
 	public List<GameObject> resources;
+    //public Transform FeIcon;
+    //public Transform SiIcon;
+    public Transform ResourceIcon;
+
+    public SpriteRenderer SiFrame;
+    public SpriteRenderer SiFill;
+    public SpriteRenderer SiBack;
+
+    public SpriteRenderer FeFrame;
+    public SpriteRenderer FeFill;
+    public SpriteRenderer FeBack;
+
 
 	// Use this for initialization
 	void Start () 
 	{
-		ResourceController.Change += redraw;
+		InventoryController.Change += redraw;
 	}
 
 	void OnDestroy()
 	{
-		ResourceController.Change -= redraw;
+		InventoryController.Change -= redraw;
 	}
 
 	void redraw()
 	{
+        foreach(Transform child in transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        
+        int x = 0;
 
-		foreach(Transform child in transform)
-		{
-			GameObject.Destroy(child.gameObject);
-		}
+        foreach (InventoryStack stack in Grid.gameController.inventoryController.inventoryPool)
+        {
+            float newx = (x * 0.25f)-0.5f;
+            Vector3 pos = new Vector3(newx, 0, 0);
 
-		foreach (string key in Grid.gameController.resourceController.resourcePool.Keys.ToArray())
-		{
-			GameObject resourceType = Instantiate(resourceTypeUI);
-			Text resourceTypeText = resourceType.transform.FindChild("ResourceType").GetComponent<Text>();
-			Text resourceAmountText = resourceType.transform.FindChild("ResourceAmount").GetComponent<Text>();
+            if(stack.amount != 0)
+            {
+                GameObject rIcon = Instantiate(ResourceIcon, pos, Quaternion.identity) as GameObject;
+            }
 
-			resourceTypeText.text = key;
-			resourceAmountText.text = Grid.gameController.resourceController.resourcePool[key].ToString();
+            //noe som setter rIcon sin parent til å være denne transformen, så det havner i lista
+            // det funker ikke å gjøre dette ––– rIcon.transform.SetParent(this.transform,true);
 
-			resourceType.transform.SetParent(this.transform, false);
-		}
+            // noe som bytter ut spritesa i ResourceIcon så det passer med typen ressurs vi har plukket opp
+            if(stack.type == "Fe")
+            {
+                
+            }
+            else if(stack.type == "Si")
+            {
+                
+            }
 
+            //må også sette antall på hver stack.
+
+            x += 1;
+           
+        }
 
 	}
 		

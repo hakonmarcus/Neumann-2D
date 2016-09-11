@@ -128,6 +128,10 @@ Prefab:
       propertyPath: resourceControllerObject
       value: 
       objectReference: {fileID: 169448, guid: 0f4be8a27bdbcfa41903192875fc4655, type: 2}
+    - target: {fileID: 11446682, guid: 2189778149b24224fa523080c8e6971a, type: 2}
+      propertyPath: inventoryControllerObject
+      value: 
+      objectReference: {fileID: 169448, guid: e248fddca72c542599f92b36c4196f9f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2189778149b24224fa523080c8e6971a, type: 2}
   m_IsPrefabParent: 0
