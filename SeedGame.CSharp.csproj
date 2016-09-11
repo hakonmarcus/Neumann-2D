@@ -57,12 +57,17 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ResourceUI.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ResourceController.cs" />
@@ -71,8 +76,13 @@
     <Compile Include="Assets\Scripts\Grid\Grid.cs" />
     <Compile Include="Assets\Scripts\Interfaces\Saveable.cs" />
     <Compile Include="Assets\Scripts\Models\Ore.cs" />
+    <Compile Include="Assets\Scripts\Models\Panel.cs" />
     <Compile Include="Assets\Scripts\Models\Planet.cs" />
+    <Compile Include="Assets\Scripts\ObjectProperties\InventoryProperty.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\UI\InventoryStack.cs" />
+    <Compile Include="Assets\Scripts\UI\InventoryUI.cs" />
+    <Compile Include="Assets\Scripts\UI\ResourceUI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

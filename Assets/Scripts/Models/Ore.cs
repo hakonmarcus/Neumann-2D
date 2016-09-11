@@ -8,6 +8,12 @@ public class Ore : MonoBehaviour {
     public int value;
     public int quantity;
 
+    public SpriteRenderer Frame;
+    public SpriteRenderer Fill;
+    public SpriteRenderer Back;
+
+
+
     public string getName()
     {
         return this.name;

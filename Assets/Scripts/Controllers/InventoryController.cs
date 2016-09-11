@@ -46,8 +46,6 @@ public class InventoryController : MonoBehaviour
 	{
 		Debug.Log("Added some "+type);
 
-
-
 		while (quantity > 0)
 		{
 			int currentSlot = -1;
