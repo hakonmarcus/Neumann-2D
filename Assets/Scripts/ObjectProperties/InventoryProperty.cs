@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class InventoryController : MonoBehaviour 
+public class InventoryProperty : MonoBehaviour 
 {
 
 	public List<InventoryStack> inventoryPool;
@@ -96,8 +96,11 @@ public class InventoryController : MonoBehaviour
 	public void onChange()
 	{
 		Debug.Log("Inventory changed!");
-		Change();
-	}
+        if(Change != null)
+        {
+            Change();
+        }
+    }
 
 
 

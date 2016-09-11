@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Linq;
 
-public class Inventory : MonoBehaviour 
+public class InventoryUI : MonoBehaviour 
 {
 	//public GameObject resourceTypeUI;
 	public List<GameObject> resources;

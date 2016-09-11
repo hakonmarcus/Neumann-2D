@@ -70,11 +70,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Controllers\GameController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\InventoryController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ResourceController.cs" />
     <Compile Include="Assets\Scripts\GravityAttractor.cs" />
     <Compile Include="Assets\Scripts\GravityBody.cs" />
     <Compile Include="Assets\Scripts\Grid\Grid.cs" />
     <Compile Include="Assets\Scripts\Interfaces\Saveable.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Models\Ore.cs" />
     <Compile Include="Assets\Scripts\Models\Panel.cs" />
     <Compile Include="Assets\Scripts\Models\Planet.cs" />

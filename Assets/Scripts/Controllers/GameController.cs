@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour {
     public ResourceController resourceController;
 
 	public GameObject inventoryControllerObject;
-	public InventoryController inventoryController;
+	public InventoryProperty inventoryController;
 
     void Awake()
     {
@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour {
 
 		inventoryControllerObject = Instantiate (inventoryControllerObject);
 		inventoryControllerObject.transform.SetParent (this.transform);
-		inventoryController = inventoryControllerObject.GetComponent<InventoryController> ();
+		inventoryController = inventoryControllerObject.GetComponent<InventoryProperty> ();
 
 		if(inventoryController == null)
 		{
