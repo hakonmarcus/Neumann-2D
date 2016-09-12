@@ -7,7 +7,7 @@ public class InventoryController : MonoBehaviour
 
 	public List<InventoryStack> inventoryPool;
 	public int inventorySize = 5;
-	public int stackMax = 3;
+	public int stackMax = 10;
 
 	public delegate void ChangeAction();
 	public static event ChangeAction Change;

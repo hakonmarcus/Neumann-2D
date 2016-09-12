@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 498a25115ae5346c684b0d07f5ee4a61
+timeCreated: 1473612650
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - FeTop: {fileID: 21300008, guid: bf523dc0bc1524a84afab5dd62c93236, type: 3}
+  - FeMiddle: {fileID: 21300004, guid: bf523dc0bc1524a84afab5dd62c93236, type: 3}
+  - FeBottom: {fileID: 21300010, guid: bf523dc0bc1524a84afab5dd62c93236, type: 3}
+  - SiTop: {fileID: 21300000, guid: bf523dc0bc1524a84afab5dd62c93236, type: 3}
+  - SiMiddle: {fileID: 21300006, guid: bf523dc0bc1524a84afab5dd62c93236, type: 3}
+  - SiBottom: {fileID: 21300002, guid: bf523dc0bc1524a84afab5dd62c93236, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -364,7 +364,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 404534, guid: 8b093c0654f42cb419e4060fccb6bdf8, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11400856, guid: 8b093c0654f42cb419e4060fccb6bdf8, type: 2}
       propertyPath: attractor
@@ -1704,14 +1704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0a3da7c5c0f44dd8d4b172fd4ab100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resources: []
-  ResourceIcon: {fileID: 412046, guid: a7243e0bcfc394b65bfba1228f569509, type: 2}
-  SiFrame: {fileID: 0}
-  SiFill: {fileID: 0}
-  SiBack: {fileID: 0}
-  FeFrame: {fileID: 0}
-  FeFill: {fileID: 0}
-  FeBack: {fileID: 0}
+  stackIcon: {fileID: 128858, guid: 52227893459d04c4cb6b3e68826320c2, type: 2}
 --- !u!1 &1728797319
 GameObject:
   m_ObjectHideFlags: 0
